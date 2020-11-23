@@ -12,6 +12,22 @@ class GameViewController: UIViewController {
     var ship: SCNNode!
     
     func addShip() {
+        
+        
+        // move ship farther from view
+        let x = Int.random(in: -25...25)
+        let y = Int.random(in: -25...25)
+        let z = -105
+        ship.position = SCNVector3(x, y, z)
+        
+        //Make the ship look at given point
+        ship.look(at: SCNVector3(2 * x, 2 * y, 2 * z))
+        
+        
+        //animate ship movement  towards camera
+      //  ship.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
+        ship.runAction(.move(to: SCNVector3(), duration: 5))
+        
         // retrieve the SCNView
         let scnView = self.view as! SCNView
         

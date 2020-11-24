@@ -71,7 +71,6 @@ class GameViewController: UIViewController {
     
     func removeShip() {
 
-        
         // revove the ship
         scnView.scene?.rootNode.childNode(withName: "ship", recursively: true)?.removeFromParentNode()
     }

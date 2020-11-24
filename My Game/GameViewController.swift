@@ -9,6 +9,8 @@ import SceneKit
 
 class GameViewController: UIViewController {
     //MARK: - Properties
+    var duration: TimeInterval = 5
+    var score = 0
     var ship: SCNNode!
     
     func addShip() {
@@ -26,7 +28,10 @@ class GameViewController: UIViewController {
         
         //animate ship movement  towards camera
       //  ship.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
-        ship.runAction(.move(to: SCNVector3(), duration: 5))
+        ship.runAction(.move(to: SCNVector3(), duration: duration)) {
+            self.ship.removeFromParentNode()
+            print(#line, #function, "Game over")
+        }
         
         // retrieve the SCNView
         let scnView = self.view as! SCNView
@@ -137,16 +142,20 @@ class GameViewController: UIViewController {
             
             // highlight it
             SCNTransaction.begin()
-            SCNTransaction.animationDuration = 0.5
+            SCNTransaction.animationDuration = 0.2
             
             // on completion - unhighlight
             SCNTransaction.completionBlock = {
-                SCNTransaction.begin()
-                SCNTransaction.animationDuration = 0.5
                 
-                material.emission.contents = UIColor.black
+                self.ship.removeFromParentNode()
+                self.score += 1
                 
-                SCNTransaction.commit()
+                
+                print(#line, #function, "The ship \(self.score) has been shot")
+                self.duration *= 0.95
+                
+                self.ship = self.getShip()
+                self.addShip()
             }
             
             material.emission.contents = UIColor.red

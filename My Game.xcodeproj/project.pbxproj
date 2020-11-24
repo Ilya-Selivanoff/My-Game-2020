@@ -12,6 +12,8 @@
 		D5682D1E256AFD35005F94BD /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5682D1D256AFD35005F94BD /* GameViewController.swift */; };
 		D5682D21256AFD35005F94BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5682D1F256AFD35005F94BD /* Main.storyboard */; };
 		D5682D23256AFD37005F94BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5682D22256AFD37005F94BD /* Assets.xcassets */; };
+		D5682D2E256DB233005F94BD /* Screen Shot 01.png in Resources */ = {isa = PBXBuildFile; fileRef = D5682D2C256DB233005F94BD /* Screen Shot 01.png */; };
+		D5682D2F256DB233005F94BD /* Screen Shot 02.png in Resources */ = {isa = PBXBuildFile; fileRef = D5682D2D256DB233005F94BD /* Screen Shot 02.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		D5682D20256AFD35005F94BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D5682D22256AFD37005F94BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5682D24256AFD37005F94BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5682D2C256DB233005F94BD /* Screen Shot 01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 01.png"; sourceTree = "<group>"; };
+		D5682D2D256DB233005F94BD /* Screen Shot 02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 02.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		D5682D18256AFD35005F94BD /* My Game */ = {
 			isa = PBXGroup;
 			children = (
+				D5682D31256DB27B005F94BD /* Screenshots */,
 				D5682D19256AFD35005F94BD /* AppDelegate.swift */,
 				D5682D1B256AFD35005F94BD /* art.scnassets */,
 				D5682D1D256AFD35005F94BD /* GameViewController.swift */,
@@ -62,6 +67,15 @@
 				D5682D24256AFD37005F94BD /* Info.plist */,
 			);
 			path = "My Game";
+			sourceTree = "<group>";
+		};
+		D5682D31256DB27B005F94BD /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				D5682D2C256DB233005F94BD /* Screen Shot 01.png */,
+				D5682D2D256DB233005F94BD /* Screen Shot 02.png */,
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +137,8 @@
 			files = (
 				D5682D1C256AFD35005F94BD /* art.scnassets in Resources */,
 				D5682D23256AFD37005F94BD /* Assets.xcassets in Resources */,
+				D5682D2E256DB233005F94BD /* Screen Shot 01.png in Resources */,
+				D5682D2F256DB233005F94BD /* Screen Shot 02.png in Resources */,
 				D5682D21256AFD35005F94BD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
